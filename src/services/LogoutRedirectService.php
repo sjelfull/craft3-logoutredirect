@@ -42,18 +42,16 @@ class LogoutRedirectService extends Component
                 $isSiteRequest = Craft::$app->request->isSiteRequest;
 
                 if ( ($isCpRequest || $isSiteRequest) && $redirectUrl ) {
-                    Craft::info('Must redirect ' . $redirectUrl, 'logout-redirect');
-
                     Craft::$app->response->redirect($redirectUrl);
-                    Craft::$app->response->sendAndClose();
+                    Craft::$app->end();
                 }
                 else if ( $isCpRequest && $redirectCpUrl ) {
                     Craft::$app->response->redirect($redirectCpUrl);
-                    Craft::$app->response->sendAndClose();
+                    Craft::$app->end();
                 }
                 else if ( $isSiteRequest && $redirectSiteUrl ) {
                     Craft::$app->response->redirect($redirectSiteUrl);
-                    Craft::$app->response->sendAndClose();
+                    Craft::$app->end();
                 }
             }
         }
