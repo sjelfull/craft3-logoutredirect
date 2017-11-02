@@ -1,0 +1,49 @@
+{#
+/**
+ * Logout Redirect plugin for Craft CMS 3.x
+ *
+ * Logout Redirect Settings.twig
+ *
+ * @author    Superbig
+ * @copyright Copyright (c) 2017 Superbig
+ * @link      https://superbig.co
+ * @package   LogoutRedirect
+ * @since     2.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.lightswitchField({
+    label: 'Enabled',
+    id: 'enabled',
+    name: 'enabled',
+    on: settings['enabled']})
+}}
+
+
+{{ forms.textField({
+    label: 'Redirect URL',
+    instructions: 'To redirect all users after logout - this will override the two other config options',
+    id: 'redirectUrl',
+    name: 'redirectUrl',
+    value: settings['redirectUrl']})
+}}
+
+
+{{ forms.textField({
+    label: 'Redirect CP URL',
+    instructions: 'To redirect CP users after logout',
+    id: 'redirectCpUrl',
+    name: 'redirectCpUrl',
+    value: settings['redirectCpUrl']})
+}}
+
+
+{{ forms.textField({
+    label: 'Redirect Site URL',
+    instructions: 'To redirect site users after logout',
+    id: 'redirectSiteUrl',
+    name: 'redirectSiteUrl',
+    value: settings['redirectSiteUrl']})
+}}

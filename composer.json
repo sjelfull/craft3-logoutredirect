@@ -1,0 +1,50 @@
+{
+    "name": "superbig/craft3-logoutredirect",
+    "description": "Configure where to send users after they logout.",
+    "type": "craft-plugin",
+    "version": "2.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "logout redirect"
+    ],
+    "support": {
+        "docs": "https://github.com/sjelfull/craft3-logoutredirect/blob/master/README.md",
+        "issues": "https://github.com/sjelfull/craft3-logoutredirect/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Superbig",
+            "homepage": "https://superbig.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "~3.0.0-beta.23"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "superbig\\logoutredirect\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Logout Redirect",
+        "handle": "logout-redirect",
+        "schemaVersion": "2.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/sjelfull/craft3-logoutredirect/master/CHANGELOG.md",
+        "class": "superbig\\logoutredirect\\LogoutRedirect",
+        "components": {
+            "logoutRedirectService": "superbig\\logoutredirect\\services\\LogoutRedirectService"
+        }
+    }
+}
