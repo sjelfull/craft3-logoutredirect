@@ -39,7 +39,7 @@
         "name": "Logout Redirect",
         "handle": "logout-redirect",
         "schemaVersion": "2.0.0",
-        "hasCpSettings": true,
+        "hasCpSettings": false,
         "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/sjelfull/craft3-logoutredirect/master/CHANGELOG.md",
         "class": "superbig\\logoutredirect\\LogoutRedirect",
