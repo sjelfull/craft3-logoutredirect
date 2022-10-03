@@ -21,6 +21,7 @@ To install the plugin, follow these instructions.
         composer require superbig/craft3-logoutredirect
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Logout Redirect.
+4. Create a configuration file named `logout-redirect.php` in the Craft config directory, usually `craft/config`.
 
 ## Configuring Logout Redirect
 
